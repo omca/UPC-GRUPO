@@ -1,7 +1,9 @@
 UPCTwitter::Application.routes.draw do
+  root :to => 'tweets#index'
 	resources :tweets
 	match "read_message" => "tweets#read_message"
   match "update_status" => "tweets#update_status"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -52,7 +54,7 @@ UPCTwitter::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  
 
   # See how all your routes lay out with "rake routes"
 
